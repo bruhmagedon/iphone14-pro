@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/*селектор класса*/
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #0a0a0a;
+    line-height: normal; /*высота строки*/
+}
+/* nomalize.css - отключение некоторых стилей браузера по умолчанию*/
+
+a {
+    text-decoration: none;
+    color: inherit; /*цвет, который задан у родителя*/
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header {
+    background-color: #0a0a0a;
+    padding: 32px 0 31px;
+    /* высоту обычно не принято задавать в фиксированых размерах */
+    /* высота ориентирована на количество контента в блоке */
+    color: #717171;
+    font-size: 24px;
+}
+
+.container {
+    /* max-width используется для адаптива */
+    /* Ширина вообще очень сильно ориентирована на адаптив */
+    max-width: 1200px;
+    margin: 0 auto; /* центрирование  */
+    /* auto - автоматически высчитывает браузер по левому и правому краю одинаковые размеры */
+    /* auto работает только если блоку задана фиксированная ширина */
+    padding: 0 15px; /*p0-15*/
+    /* размеры в p и m идут по часовой стрелке */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* блочный тег - div (ширина экрана или родителя)
+строчный - ширина контента */
+.menu {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.phone {
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: right;
+}
+/* изменили пропорции у двух элементов чтобы центрировать лого */
+
+.menu-item {
+    padding-right: 30px;
+}
+
+.headline {
+    background-color: #f5f5f7;
+    padding: 70px 0 40px;
+    text-align: center; /*центрирование всех дочерних*/
+}
+
+.title {
+    text-transform: uppercase;
+    margin: 0 0 40px;
+    /* внегласное правильно */
+    /* делать отступ от верх эл к нижн нужно через mb */
+    color: #490e84;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.headline-img {
+    margin-bottom: 25px;
+}
+
+.headline-btn {
+    /* Изначально строчный элемент ссылки */
+    /* чтобы ему можно было задавать свойства блочных элементов */
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    background-color: #490e84;
+    padding: 22px 117px 19px 118px;
+    border-radius: 30px;
+}
+
+.new {
+    padding: 90px 0 150px;
+}
+
+.new-title,
+.color-title {
+    margin: 0 0 50px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #717171;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.new-info {
+    display: flex;
+    align-items: center;
+}
+
+.new-text p {
+    max-width: 650px;
+    margin: 0 0 30px;
+}
+
+.new-text strong {
+    font-size: 20px;
+    max-width: 650px;
+    display: block;
+    /* делаем блочным, потому что ширина не применялась к строчному */
+}
+
+.new-img {
+    margin-left: 190px;
+}
+
+.color {
+    padding-bottom: 150px;
+}
+
+.color-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.color-item img {
+    margin-bottom: 20px;
+}
+
+.color-item h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.color-item p {
+    margin: 0;
+}
+
+.contacts-inner {
+    display: flex;
+    background: #574b63;
+}
+
+.contacts-form {
+    color: white;
+    width: 100%;
+    padding: 130px 93px;
+    text-align: center;
+}
+
+.contacts-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 60px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.contacts-input {
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #fff;
+    display: block; /*display-block чтобы указать ширину в 100%*/
+    width: 100%;
+    margin-bottom: 20px;
+    background: #574b63;
+    color: white;
+}
+
+.contacts:focus {
+    border: none;
+}
+
+.contacts-input::placeholder {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.contacts-form p {
+    opacity: 0.5;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.contacts-btn {
+    border: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    background: #fff;
+    padding: 16px 81px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #0a0a0a;
+}
+
+.footer-inner {
+    color: #717171;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+    font-size: 24px;
+}
+
+.footer-link {
+    font-size: 14px;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+/* Адаптив */
+/* самое ужасное, что может появится - нижний скролл */
+/* минимальный размер экрана - 320px по ширине */
+
+/* меньше чем выбранная ширина */
+@media (max-width: 1200px) {
+    .headline-img {
+        max-width: 100%;
+        /* изображение плавно уменьшается вместе с экраном */
+    }
+    .contacts-inner {
+        display: block;
+    }
+    .contacts-form {
+        width: auto;
+    }
+    .contacts-title {
+        text-align: center;
+    }
+    .contacts-img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .color-list {
+        flex-wrap: wrap;
+        /* разрешение переноса айтемов */
+    }
+    .color-item {
+        width: 50%;
+        /* элемент занимает 50% экрана */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 940px) {
+    /* .new-img {
+        display: none;
+    } */
+    .new-info {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .new-img {
+        margin: 0 0 30px;
+    }
+    .new-text p,
+    .new-text b {
+        max-width: 100%;
+    }
+    .new-title,
+    .color-title,
+    .contacts-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 560px) {
+    .title {
+        font-size: 34px;
+    }
+    .headline-btn {
+        font-size: 18px;
+        padding: 16px 90px 16px;
+    }
+    .color-item {
+        width: 100%;
+        /* элемент занимает весь экрана */
+    }
+}
